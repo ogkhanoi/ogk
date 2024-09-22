@@ -1,0 +1,150 @@
+
+/* "*" giá trị áp dụng cho toàn bộ trang web */
+/** {
+	padding: 0px; 
+	margin: 0px;
+}*/
+
+#xinchao{
+	background-color: #32a852; /* màu nền */
+	text-align: center;        /* vị trí văn bản hiển thị */
+	padding: 60px;				/* viền quanh văn bản */
+	margin: 0px 4px 0px 4px;				/* viền quanh khung padding */
+/*	font-weight: normal;*/
+	}
+nav{
+	padding: 0px 60px;
+	background-color: gray;
+	margin: 0px 4px 20px 4px ;
+	overflow: hidden; /* co margin của con thẻ a không vượt quá bố thẻ nav*/
+}
+
+/* giá trị áp dụng cho thẻ a chỉ nằm trong thẻ nav */ 
+nav a{
+	color: white;
+	padding: 14px 10px;
+	margin: 2px;
+
+	 /*  display: block;  chuyển sắp xếp hàng thành cột */
+}
+nav a:hover {
+	background-color: white;
+	color: blue;
+}
+nav	a.left{
+	float: left;
+	font-size: 20px;
+}
+nav a.right{
+	float: right;
+	font-size: 20px;
+}
+
+#bentrai{
+	flex: 20%;
+	background-color: blue;
+	padding: 10px 15px;
+/*	font-weight: bold;*/
+}
+#giua{
+	flex: 60%;
+	padding: 20px 20px;
+	background-color: red;
+	text-align: center;
+}
+#benphai{
+	flex: 20%;
+	padding: 10px 15px;
+	background-color: gray;
+}
+#contener{
+	display: flex;
+	flex-wrap: nowrap; /* khi để wrap thì padding giá trị trong đó nó sẽ không 
+	đúng như mình chia 2,3 phần cột ra, mà nó sẽ nhận bên trái là 100% */
+	margin: 20px 100px;
+}
+#footer{
+	background-color: gray;
+	padding: 10px;
+	text-align: right;
+	font-size: 20px;
+}
+footer a{
+	color: white;
+}
+#center{
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.khoahoc {
+	width: 33%;
+	float: left;
+
+}
+.khoahoc_img {
+	width: 90%;
+}
+
+.mota{
+	color: white;
+	width: auto;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+}
+table td, table th{
+	border: 1px solid #ddd;
+/*	width: 100%;*/
+}
+
+table tr{
+	background-color: #f2f2f2;
+}
+table th{
+	padding: 8px;
+/*	padding-bottom: 8px;*/
+/*	text-align: ;*/
+	background-color: #04aa6d;
+	color: white;
+}
+table tr:hover{
+	background-color: #ddd;
+}
+
+@media(max-width: 800px) /* áp dụng nền màu đỏ khi dùng minitab*/
+{
+	* {
+		background-color: red ;
+
+	}
+	#bentrai{
+		flex: 100%;
+	}
+	#giua{
+		flex: 100%;
+	}
+	#benphai{
+		flex: 100%;
+	}
+	#contener{
+		flex-wrap: wrap;
+	}
+	.khoahoc{
+		width: 50%;
+	}
+}
+@media(max-width: 400px) /* áp dụng nền màu skyblue khi dùng điện thoại */
+{
+	* {
+		background-color: skyblue;
+		.khoahoc{
+			width: 50%;
+			float: left;
+		}
+	}
+}
